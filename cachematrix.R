@@ -5,7 +5,7 @@
 ## This function cache an inverse of a matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
-  inv <- NULL
+  inv <<- NULL
   set <- function(y) {
     x <<- y
     inv <<- NULL
@@ -14,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() x
   inv <<- solve(x)           ## Finding the inverse of the matrix
   
-  setinv <- function(solve) inv
+  setinv <- function(solve) inv 
   getinv <- function() inv
   list(set = set, get = get,
        setinv = setinv,
